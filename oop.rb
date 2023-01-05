@@ -30,14 +30,9 @@ uni1.say("I'm the most beautiful unicorn EVER")
 class Vampire
     attr_reader :name
 
-    def initialize (name, pet)
+    def initialize (name, pet = "bat")
         @name = name
-        @pet = 
-            if pet == nil
-                "bat"
-            else
-                pet
-            end
+        @pet = pet
         @thirsty = true
     end
 
@@ -46,8 +41,7 @@ class Vampire
     end
 end
 
-#I've tried to get the attribute to default to bat without needing any input but I can't figure out how to get past initialize needing 2 arguments if the pet argument is empty.
-vamp1 = Vampire.new("Gary", nil)
+vamp1 = Vampire.new("Gary")
 p vamp1
 
 vamp1.drink
@@ -64,7 +58,6 @@ p vamp2
 #  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
 
 class Dragon
-
     def initialize (name, rider, color)
         @name = name
         @rider = rider
@@ -102,3 +95,6 @@ p drg1
 #  it should have an is_old attribute that defaults to false. once a Hobbit is 101, it is old.
 #  it should have a has_ring attribute. If the Hobbit's name is "Frodo", true, if not, false.
 
+# class Hobbit
+#     def initialize (name, disposition)
+#         @name 
