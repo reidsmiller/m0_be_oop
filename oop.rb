@@ -81,9 +81,7 @@ p drg1
 drg1.eat
 p drg1
 
-drg1.eat
-drg1.eat
-drg1.eat
+3.times {drg1.eat}
 p drg1
 
 #  Write a Hobbit class
